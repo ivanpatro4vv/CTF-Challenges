@@ -1,0 +1,7 @@
+<?php
+// PHP SQL Injection Vulnerability
+$id = $_GET['id'];
+$conn = new mysqli('localhost', 'user', 'password', 'database');
+$sql = "SELECT * FROM users WHERE id = $id";
+$result = $conn->query($sql);
+?>
